@@ -16,6 +16,7 @@ with open('credit.pkl', 'rb') as f:
 naive_credit_data = GaussianNB()
 naive_credit_data.fit(x_credit_treinamento, y_credit_treinamento)
 
+# Fazendo previsões e comparando com o gabarito do teste
 previsoes = naive_credit_data.predict(x_credit_teste)
 print(accuracy_score(y_credit_teste, previsoes))
 print(confusion_matrix(y_credit_teste, previsoes))
